@@ -16,10 +16,10 @@ int result=1;
 pthread_t t1;
 pthread_t t2;
 
-result = pthread_create(&t1,NULL,increment_func(),NULL);
+result = pthread_create(&t1,NULL,increment_func,NULL);
 if(result)
 printf("thread1Not created");
-result = pthread_create(&t2,NULL,decrement_func(),NULL);
+result = pthread_create(&t2,NULL,decrement_func,NULL);
 if(result)
 printf("thread2Not created");
 }
